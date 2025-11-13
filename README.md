@@ -4,8 +4,6 @@ Project UMA
 My take on a certain horse game, but for Minecraft.
 Currently WIP. Stay tuned for more updates and junk.
 
-==========
-
 Installation information
 =======
 
