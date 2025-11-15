@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "umaproject:block/uma_block"
+    }
+  }
+}

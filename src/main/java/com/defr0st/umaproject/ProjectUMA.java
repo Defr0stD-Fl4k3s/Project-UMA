@@ -1,6 +1,7 @@
 package com.defr0st.umaproject;
 
-import com.defr0st.umaproject.item.ModItems;
+import com.defr0st.umaproject.block.UmaBlocks;
+import com.defr0st.umaproject.item.UmaItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
 
@@ -36,7 +37,8 @@ public class ProjectUMA {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
-        ModItems.register(modEventBus);
+        UmaItems.register(modEventBus);
+        UmaBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -51,7 +53,11 @@ public class ProjectUMA {
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.UMA_SOUL);
+            event.accept(UmaItems.UMA_SOUL);
+        }
+
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(UmaBlocks.UMA_BLOCK);
         }
     }
 
