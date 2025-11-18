@@ -18,20 +18,24 @@ public class UmaBlocks {
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(ProjectUMA.MOD_ID);
 
+    // Declare new blocks with their unique properties
     public static final DeferredBlock<Block> UMA_BLOCK = registerBlock("uma_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
 
+    // Block registration function
     private static <T extends Block> DeferredBlock<T>  registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
         return toReturn;
     }
 
+    // BlockItem registration function
     private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
         UmaItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
+    //
     public static void register(IEventBus eventBus){
         BLOCKS.register(eventBus);
     }

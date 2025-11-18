@@ -1,6 +1,7 @@
 package com.defr0st.umaproject;
 
 import com.defr0st.umaproject.block.UmaBlocks;
+import com.defr0st.umaproject.item.UmaCreativeModeTabs;
 import com.defr0st.umaproject.item.UmaItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
@@ -40,6 +41,9 @@ public class ProjectUMA {
         // Register all items and blocks
         UmaItems.register(modEventBus);
         UmaBlocks.register(modEventBus);
+
+        // Register creative mode tabs
+        UmaCreativeModeTabs.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);

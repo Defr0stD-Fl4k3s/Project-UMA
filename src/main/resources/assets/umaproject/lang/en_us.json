@@ -1,5 +1,8 @@
 {
   "item.umaproject.uma_soul": "Uma Soul",
 
-  "block.umaproject.uma_block": "Uma Block"
+  "block.umaproject.uma_block": "Uma Block",
+
+  "creativetab.umaproject.uma_items": "Uma Items",
+  "creativetab.umaproject.uma_blocks": "Uma Blocks"
 }
