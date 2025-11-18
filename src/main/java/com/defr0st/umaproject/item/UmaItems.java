@@ -7,11 +7,14 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class UmaItems {
+    // Declared var ITEMS as an item made in the mods
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ProjectUMA.MOD_ID);
 
+    // Declare and register mod items
     public static final DeferredItem<Item> UMA_SOUL = ITEMS.register("uma_soul",
             () -> new Item(new Item.Properties()));
 
+    // Item registration function
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

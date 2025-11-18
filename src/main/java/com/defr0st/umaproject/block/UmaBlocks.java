@@ -14,6 +14,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import java.util.function.Supplier;
 
 public class UmaBlocks {
+    // Declared var BLOCKS as a block made in the mod
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(ProjectUMA.MOD_ID);
 
