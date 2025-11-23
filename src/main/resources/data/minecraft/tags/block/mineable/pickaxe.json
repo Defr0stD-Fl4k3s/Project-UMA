@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "umaproject:carat_block",
+    "umaproject:carat_ore",
+    "umaproject:carat_deepslate_ore"
+  ]
+}

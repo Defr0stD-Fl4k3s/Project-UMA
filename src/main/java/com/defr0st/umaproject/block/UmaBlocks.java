@@ -2,9 +2,11 @@ package com.defr0st.umaproject.block;
 
 import com.defr0st.umaproject.ProjectUMA;
 import com.defr0st.umaproject.item.UmaItems;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
@@ -19,9 +21,17 @@ public class UmaBlocks {
             DeferredRegister.createBlocks(ProjectUMA.MOD_ID);
 
     // Declare new blocks with their unique properties
-    public static final DeferredBlock<Block> UMA_BLOCK = registerBlock("uma_block",
+    public static final DeferredBlock<Block> CARAT_BLOCK = registerBlock("carat_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
+
+    public static final DeferredBlock<Block> CARAT_ORE = registerBlock("carat_ore",
+            () -> new DropExperienceBlock(UniformInt.of(2, 4),
+                    BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+
+    public static final DeferredBlock<Block> CARAT_DEEPSLATE_ORE = registerBlock("carat_deepslate_ore",
+            () -> new DropExperienceBlock(UniformInt.of(3, 6), BlockBehaviour.Properties.of()
+                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
 
     // Block registration function
     private static <T extends Block> DeferredBlock<T>  registerBlock(String name, Supplier<T> block) {

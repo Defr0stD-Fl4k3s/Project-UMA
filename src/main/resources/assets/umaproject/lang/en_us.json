@@ -1,7 +1,11 @@
 {
-  "item.umaproject.uma_soul": "Uma Soul",
+  "item.umaproject.carat": "Carat",
+  "item.umaproject.uma_soul": "Soul",
+  "item.umaproject.rough_carat": "Rough Carat",
 
-  "block.umaproject.uma_block": "Uma Block",
+  "block.umaproject.carat_block": "Carat Block",
+  "block.umaproject.carat_ore": "Carat Ore",
+  "block.umaproject.carat_deepslate_ore": "Deepslate Carat Ore",
 
   "creativetab.umaproject.uma_items": "Uma Items",
   "creativetab.umaproject.uma_blocks": "Uma Blocks"

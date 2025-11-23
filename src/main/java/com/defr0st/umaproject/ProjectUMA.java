@@ -57,13 +57,7 @@ public class ProjectUMA {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(UmaItems.UMA_SOUL);
-        }
 
-        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(UmaBlocks.UMA_BLOCK);
-        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

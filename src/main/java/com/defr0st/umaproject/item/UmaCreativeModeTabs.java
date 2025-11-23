@@ -18,20 +18,24 @@ public class UmaCreativeModeTabs {
 
     public static final Supplier<CreativeModeTab> UMA_ITEMS_TAB = CREATIVE_MODE_TAB.register("uma_items_tab",
             () -> CreativeModeTab.builder()
-                    .icon(() -> new ItemStack(UmaItems.UMA_SOUL.get()))
+                    .icon(() -> new ItemStack(UmaItems.CARAT.get()))
                     .title(Component.translatable("creativetab.umaproject.uma_items"))
                     .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(UmaItems.ROUGH_CARAT);
+                        output.accept(UmaItems.CARAT);
                         output.accept(UmaItems.UMA_SOUL);
                     })
                     .build());
 
     public static final Supplier<CreativeModeTab> UMA_BLOCKS_TAB = CREATIVE_MODE_TAB.register("uma_blocks_tab",
             () -> CreativeModeTab.builder()
-                    .icon(() -> new ItemStack(UmaBlocks.UMA_BLOCK.get()))
+                    .icon(() -> new ItemStack(UmaBlocks.CARAT_BLOCK.get()))
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(ProjectUMA.MOD_ID, "uma_items_tab"))
                     .title(Component.translatable("creativetab.umaproject.uma_blocks"))
                     .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(UmaBlocks.UMA_BLOCK);
+                        output.accept(UmaBlocks.CARAT_BLOCK);
+                        output.accept(UmaBlocks.CARAT_ORE);
+                        output.accept(UmaBlocks.CARAT_DEEPSLATE_ORE);
                     })
                     .build());
 

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cooking time": 200,
+  "experience": 0.25,
+  "group": "carat",
+  "ingredient": {
+    "item": "umaproject:rough_carat"
+  },
+  "result": {
+    "count": 1,
+    "id": "umaproject:carat"
+  }
+}

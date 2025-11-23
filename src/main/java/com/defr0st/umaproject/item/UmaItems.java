@@ -11,6 +11,13 @@ public class UmaItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ProjectUMA.MOD_ID);
 
     // Declare and register mod items
+
+    public static final DeferredItem<Item> ROUGH_CARAT = ITEMS.register("rough_carat",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> CARAT = ITEMS.register("carat",
+            () -> new Item(new Item.Properties()));
+
     public static final DeferredItem<Item> UMA_SOUL = ITEMS.register("uma_soul",
             () -> new Item(new Item.Properties()));
 
